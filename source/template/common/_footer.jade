@@ -1,0 +1,42 @@
+footer#section3.page-footer.section
+    .page-footer__wrapper
+        form.touch-form(action="")
+            .touch-form-title
+                legend.touch-form-title__text Get In Touch
+            
+            .touch-form-descr
+                .touch-form-descr__text In order to get in touch use the contact form below:
+
+            .touch-form-inputs
+               .touch-form-inputs__group
+                    input.touch-form-inputs__text(type="text" name="name" required placeholder="Name (Required)")
+
+                .touch-form-inputs__group
+                    input.touch-form-inputs__text(type="email" name="email" required placeholder="Email (Required)")
+                .touch-form-inputs__group
+                    input.touch-form-inputs__text(type="text" name="name" placeholder="Subject")
+
+                .touch-form-inputs__group
+                    textarea.touch-form-inputs__text.touch-form-inputs__text--aria(name="message" placeholder="Write your message here...")
+
+                .touch-form-inputs__group.touch-form-inputs__group--submit
+                    input.touch-form-inputs__submit(type="submit" value="SEND")
+
+
+            .touch-form-address
+                .touch-form-direction
+                    .touch-form-direction__text
+                        strong.touch-form-direction__title Quisque Hendrerit: 
+                        | purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae. 
+
+                ul.touch-form-address__list
+                    li.touch-form-address__item
+                        a.touch-form-address__link.touch-form-address__link--addr(href="#") Elm St. 14/05 Lost City
+                    li.touch-form-address__item
+                        a.touch-form-address__link.touch-form-address__link--tel(href="#") + 3528 331 86 35
+                    li.touch-form-address__item
+                        a.touch-form-address__link.touch-form-address__link--email(href="#") info@hexalcorp.com
+
+
+script(src="assets/js/foundation.js")
+script(src="assets/js/app.js")

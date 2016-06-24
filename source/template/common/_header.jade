@@ -1,0 +1,20 @@
+header#section0.page-header.section
+    .page-header__wrap
+        .header-logo
+            img.header-logo__img(src="/assets/img/my-logo.png", alt="logo")
+
+        nav#menu.header-nav
+            .header-nav__wrap
+                ul.header-nav__list.first-page
+                    each anchor, item  in {'Portfolio': 'firstPage', 'Me': 'secondPage', 'Contacts': 'thirdPage'}
+                        li.header-nav__item( data-menuanchor=anchor )
+                            a.header-nav__link(href='##{anchor}' )= item
+            .header-nav-mob
+                a.header-nav-mob__btn(href="javascript:void(0)")
+                    .header-nav-mob__btn-toggle
+
+    .autor
+        .autor-name
+            .autor-name__text Vadim Dermanovskiy
+        .autor-role
+            .autor-role__text Junior Frontend developer

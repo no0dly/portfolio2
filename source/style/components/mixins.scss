@@ -1,0 +1,18 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; 
+    display: table; 
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin transition( $sec ) {
+    -webkit-transition: all $sec;
+    -moz-transition: all $sec;
+    -ms-transition: all $sec;
+    -o-transition: all $sec;
+    transition: all $sec;
+}

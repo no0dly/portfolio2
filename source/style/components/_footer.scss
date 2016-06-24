@@ -1,0 +1,170 @@
+.page-footer {
+	background: $footer-bg;
+	padding: 0 7%;
+}
+
+.page-footer__wrapper {
+	margin: 0 auto;
+	width: 100%;
+	@media (max-width: 450px) {
+		padding-top: 10px;
+	}
+}
+
+.touch-form {
+	max-width: 800px;
+	margin: 0 auto;
+	@include clearfix;
+}
+
+.touch-form-inputs {
+	width: 72%;
+	float: left;
+	@media screen and (max-width: 700px) {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+.touch-form-title,
+.touch-form-descr {
+	width: 100%;
+}
+
+.touch-form-descr {
+	margin-bottom: 20px;
+	@media (max-width: 450px) {
+		padding-right: 60px;
+	}
+}
+
+.touch-form-title__text {
+	color: $title;
+	font-size: 1.875rem;
+	font-weight: 400;
+	@media (max-width: 450px) {
+		font-size: 1rem;
+	}
+}
+
+.touch-form-descr__text {
+	color: $text;
+	font-size: 1.125rem;
+	font-weight: 300;
+	@media (max-width: 450px) {
+		font-size: 0.875rem;
+	}
+}
+
+.touch-form-address {
+	width: 25%;
+	float: right;
+	@media screen and (max-width: 700px) {
+		width: 100%;
+	}
+}
+
+.touch-form-inputs__group {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.touch-form-inputs__text {
+	width: 100%;
+	padding: 15px 10px;
+	color: $text;
+	background-color: $input;
+	border: none;
+	color: $text;
+	font-weight: 300;
+	font-size: 0.75rem;
+	outline: none;
+	&::-webkit-input-placeholder { color: $text; font-weight: 300; font-size: 0.75rem;}
+	&::-moz-placeholder          { color: $text; font-weight: 300; font-size: 0.75rem;}
+	&:-moz-placeholder           { color: $text; font-weight: 300; font-size: 0.75rem;}
+	&:-ms-input-placeholder      { color: $text; font-weight: 300; font-size: 0.75rem;}
+}
+
+.touch-form-inputs__text--aria {
+	resize: none;
+	height: 150px;
+	line-height: inherit;
+	@media (max-height: 600px) {
+		height: 110px;
+	}
+}
+
+.touch-form-inputs__group--submit {
+	display: inline-block;
+	text-align: right;
+}
+
+.touch-form-inputs__submit {
+	background-color: $red;
+	color: $lwhite;
+	padding: 14px 30px;
+	border: none;
+	font-size: 0.75rem;
+	font-weight: 500;
+	transition: 0.3s;
+	&:hover {
+		background-color: lighten($red, 10%);
+		color: $white;
+	}
+}
+
+.touch-form-direction {
+	margin-bottom: 58px;
+	@media screen and (max-width: 700px) {
+		margin-bottom: 20px;
+	}
+}
+
+.touch-form-direction__text {
+	color: $text;
+	font-size: 0.75rem;
+	font-weight: 300;
+	line-height: 2;
+}
+
+.touch-form-direction__title {
+	color: $title;
+	font-weight: 400;
+}
+
+.touch-form-address {
+	@media (max-width: 450px) {
+		display: none;
+	}
+}
+
+.touch-form-address__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.touch-form-address__item {
+	margin-bottom: 10px;
+}
+
+.touch-form-address__link {
+	padding-left: 30px;
+	display: block;
+	color: $text;
+	font-weight: 400;
+	text-decoration: none;
+	font-size: 0.75rem;
+}
+
+.touch-form-address__link--addr {
+	background: url('../img/icons/pin-ico.png') no-repeat 2px center;
+}
+
+.touch-form-address__link--tel {
+	background: url('../img/icons/phone-ico.png') no-repeat 0 center;
+}
+
+.touch-form-address__link--email {
+	background: url('../img/icons/envelope-ico.png') no-repeat 0 center;
+}

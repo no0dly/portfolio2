@@ -1,11 +1,16 @@
 doctype html
-html
-  include common/_head
-  body
-    <!--[if lt IE 7]>
-    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
-    <![endif]-->
+html(lang="en")
 
-    .greating
-      .greating_text Hello! I'm your training builder.
-      .greating_picture
+	include common/_head.jade
+
+	body
+		
+		#fullpage
+
+			include common/_header.jade
+
+			include common/_bee.jade
+
+			include common/_about.jade
+
+			include common/_footer.jade

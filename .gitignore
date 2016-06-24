@@ -30,7 +30,7 @@ Thumbs.db
 .hg
 .idea
 .svn
-bower_components
+bower
 dist
 build
 

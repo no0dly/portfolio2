@@ -1,0 +1,16 @@
+section#section1.section
+    #slide1.slide
+        .bee-grid
+            .bee-grid-title
+                    .bee-grid-title__text My works
+            .bee-grid__wrap
+                
+                ul.bee-grid__list
+                    each img, index in ['bee-1.png', 'bee-2.png', 'bee-3.png', 'bee-4.png', 'bee-5.png','bee-6.png', 'bee-7.png', 'bee-8.png', 'bee-9.png', 'bee-10.png', 'bee-11.png', 'bee-12.png', 'bee-13.png']
+
+                        li.bee-grid__item(data-anchor="slide1" )
+                            a.bee-grid__link.bee-grid__link--second( href='#firstPage/1')
+                                .bee-grid__box
+                                    .bee-grid__image(style='background-image: url(/assets/img/#{img})')
+
+    include _portfolio.jade
