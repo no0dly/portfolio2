@@ -1,5 +1,5 @@
 .page-footer {
-	background: $footer-bg;
+	background: $lpurple;
 	padding: 0 7%;
 }
 
@@ -72,17 +72,16 @@
 .touch-form-inputs__text {
 	width: 100%;
 	padding: 15px 10px;
-	color: $text;
-	background-color: $input;
+	background-color: $white;
 	border: none;
-	color: $text;
+	color: $dpurple;
 	font-weight: 300;
 	font-size: 0.75rem;
 	outline: none;
-	&::-webkit-input-placeholder { color: $text; font-weight: 300; font-size: 0.75rem;}
-	&::-moz-placeholder          { color: $text; font-weight: 300; font-size: 0.75rem;}
-	&:-moz-placeholder           { color: $text; font-weight: 300; font-size: 0.75rem;}
-	&:-ms-input-placeholder      { color: $text; font-weight: 300; font-size: 0.75rem;}
+	&::-webkit-input-placeholder { color: $black; font-size: 0.75rem;}
+	&::-moz-placeholder          { color: $black; font-size: 0.75rem;}
+	&:-moz-placeholder           { color: $black; font-size: 0.75rem;}
+	&:-ms-input-placeholder      { color: $black; font-size: 0.75rem;}
 }
 
 .touch-form-inputs__text--aria {
@@ -100,16 +99,17 @@
 }
 
 .touch-form-inputs__submit {
-	background-color: $red;
-	color: $lwhite;
+	background-color: $dpurple;
+	color: $white;
 	padding: 14px 30px;
 	border: none;
 	font-size: 0.75rem;
 	font-weight: 500;
 	transition: 0.3s;
+	cursor: pointer;
 	&:hover {
-		background-color: lighten($red, 10%);
-		color: $white;
+		background-color: $white;
+		color: $dpurple;
 	}
 }
 

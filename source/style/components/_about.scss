@@ -1,6 +1,7 @@
 .about {
-	background: $white url('../img/about-bg.jpg') no-repeat 0 100%;
-	background-size: contain;
+	// background: $white url('../img/about-bg.jpg') no-repeat 0 100%;
+	background: $dpurple;
+	// background-size: contain;
 	// .fp-tableCell {
 	// 	vertical-align: top;
 	// }
@@ -22,7 +23,7 @@
 	margin: 0;
 	padding: 0;
 	font-size: 2.25rem;
-	color: $black;
+	color: $lpurple;
 	font-weight: 300;
 	@media screen and (max-width: 620px) {
 		font-size: 2rem;
@@ -33,7 +34,7 @@
 }
 
 .about-content__text {
-	color: $black;
+	color: $lpurple;
 	font-size: 1.4375rem;
 	font-weight: 300;
 	@media screen and (max-width: 620px) {

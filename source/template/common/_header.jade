@@ -1,11 +1,8 @@
 header#section0.page-header.section
     .page-header__wrap
-        .header-logo
-            img.header-logo__img(src="/assets/img/my-logo.png", alt="logo")
-
         nav#menu.header-nav
             .header-nav__wrap
-                ul.header-nav__list.first-page
+                ul.header-nav__list(data-slide="first-page")
                     each anchor, item  in {'Portfolio': 'firstPage', 'Me': 'secondPage', 'Contacts': 'thirdPage'}
                         li.header-nav__item( data-menuanchor=anchor )
                             a.header-nav__link(href='##{anchor}' )= item

@@ -62,15 +62,32 @@ var app = (function() {
 
     function _hoverMenu(index, nextIndex) {
         var
-            menuList = $('.header-nav__list');
-        if( nextIndex === 1 ) {
-            menuList.addClass('first-page');
-        } else if ( nextIndex === 4 ){
-            menuList.addClass('touch-page');
-        } else {
-            menuList.removeClass('touch-page');
-            menuList.removeClass('first-page');
+            menuList = $('.header-nav__list'),
+            slideName;
+        switch (nextIndex) {
+            case 1:
+                slideName = 'first-page';
+                break;
+            case 2:
+                slideName = 'second-page';
+                break;
+            case 3:
+                slideName = 'third-page';
+                break;
+            case 4:
+                slideName = 'fourth-page';
+                break;
         }
+
+        menuList.attr('data-slide', slideName);
+        // if( nextIndex === 1 ) {
+        //     menuList.addClass('first-page');
+        // } else if ( nextIndex === 4 ){
+        //     menuList.addClass('touch-page');
+        // } else {
+        //     menuList.removeClass('touch-page');
+        //     menuList.removeClass('first-page');
+        // }
     }
 
     function _ajaxPortfolio(e) {
@@ -107,7 +124,7 @@ var app = (function() {
             }
         };
 
-        xmlhttp.send(JSON.stringify({'key': '42008d3a50539a166fa30d20201705db-us13',
+        xmlhttp.send(JSON.stringify({'key': '56abc90f71f1a6f624a2b667fd7d1356-us13',
            'message': {
                'from_email': 'prishlaRabota@write.here',
                'to': [{'email': 'thenoodly@gmail.com', 'type': 'to'}],
