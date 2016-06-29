@@ -9,6 +9,10 @@ header#section0.page-header.section
             .header-nav-mob
                 a.header-nav-mob__btn(href="javascript:void(0)")
                     .header-nav-mob__btn-toggle
+                ul.header-nav-mob__list
+                    each anchor, item  in {'Portfolio': 'firstPage', 'Me': 'secondPage', 'Contacts': 'thirdPage'}
+                        li.header-nav-mob__item( data-menuanchor=anchor )
+                            a.header-nav-mob__link(href='##{anchor}' )= item
 
     .autor
         .autor-name

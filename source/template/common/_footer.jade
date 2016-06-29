@@ -20,7 +20,8 @@ footer#section3.page-footer.section
                     textarea.touch-form-inputs__text.touch-form-inputs__text--aria(name="message" placeholder="Write your message here...")
 
                 .touch-form-inputs__group.touch-form-inputs__group--submit
-                    input.touch-form-inputs__submit(type="submit" value="SEND")
+                    //- input.touch-form-inputs__submit(type="submit" value="SEND")
+                    a.touch-form-inputs__submit(href="#") SEND
 
 
             .touch-form-address
@@ -31,11 +32,14 @@ footer#section3.page-footer.section
 
                 ul.touch-form-address__list
                     li.touch-form-address__item
-                        a.touch-form-address__link.touch-form-address__link--addr(href="#") Elm St. 14/05 Lost City
+                        i.fa.fa-map-marker(aria-hidden="true")
+                        a.touch-form-address__link.touch-form-address__link--addr(href="#") Las Vegas, Nevada
                     li.touch-form-address__item
-                        a.touch-form-address__link.touch-form-address__link--tel(href="#") + 3528 331 86 35
+                        i.fa.fa-phone(aria-hidden="true")
+                        a.touch-form-address__link.touch-form-address__link--tel(href="#") + 1 702 964 5440
                     li.touch-form-address__item
-                        a.touch-form-address__link.touch-form-address__link--email(href="#") info@hexalcorp.com
+                        i.fa.fa-envelope(aria-hidden="true")
+                        a.touch-form-address__link.touch-form-address__link--email(href="#") thenoodly@gmail.com
 
 
 script(src="assets/js/foundation.js")

@@ -8,38 +8,33 @@ var app = (function() {
             css3: true,
             scrollingSpeed: 1000,
             controlArrows: false,
-            // afterRender: _addBackBtn(),
             onLeave: _hoverMenu
+        });
+
+        $(window).load(function() { 
+            $(".loader__inner").fadeOut(); 
+            $(".loader").delay(400).fadeOut("slow"); 
         });
 
     }
 
     function _setUplisteners() {
         var sandwitch = $('.header-nav-mob__btn'),
-            navItem   = $('.header-nav__link'),
+            navItem   = $('.header-nav-mob__link'),
             beeLink   = $('.bee-grid__link'),
             form      = $('.touch-form');
 
         sandwitch.on('click', _openMobMenu);
         navItem.on('click', _closeMobMenu);
         form.on('submit', _sendEmail);
-        // beeLink.on('click', _ajaxPortfolio);
     }
 
-    // function  _addBackBtn() {
-    //     var
-    //         slide       = $('.slide'),
-    //         lastSlide   = slide.last(),
-    //         btn         = lastSlide.find('.portfolio-back');
-
-    //     btn.addClass('portfolio-back--last');
-    // }
 
     function _openMobMenu(e) {
         var
             $this   = $(this),
             nav     = $('.header-nav'),
-            items   = $('.header-nav__item');
+            items   = $('.header-nav-mob__item');
             
         if(!nav.hasClass('mobile')) {
             nav.addClass('mobile');
@@ -53,7 +48,7 @@ var app = (function() {
 
         var
             nav = $('.header-nav'),
-            items   = $('.mobile .header-nav__item');
+            items   = $('.header-nav-mob__item');
 
         items.fadeOut(500, function() {
             nav.removeClass('mobile');
@@ -79,60 +74,15 @@ var app = (function() {
                 break;
         }
 
+        menuList.fadeOut(300).delay(300).slideDown(600);
         menuList.attr('data-slide', slideName);
-        // if( nextIndex === 1 ) {
-        //     menuList.addClass('first-page');
-        // } else if ( nextIndex === 4 ){
-        //     menuList.addClass('touch-page');
-        // } else {
-        //     menuList.removeClass('touch-page');
-        //     menuList.removeClass('first-page');
-        // }
-    }
 
-    function _ajaxPortfolio(e) {
-        // e.preventDefault();
-        var
-            portfolio = $('#section1');
-
-        $.ajax({
-            url: "portfolio1.html",
-            success: function(data) {
-                portfolio.append(data);
-                $.fn.fullpage.reBuild();
-            }
-        });
     }
 
     function _sendEmail(e) {
-        e.preventDefault();
-        var xmlhttp = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-
-        xmlhttp.open('POST', 'https://mandrillapp.com/api/1.0/messages/send.json');
-        xmlhttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4) {
-                if(xmlhttp.status == 200) {
-                    alert('Mail sended!');
-                }
-                else if(xmlhttp.status == 500) {
-                    alert('Check apikey');
-                }
-                else {
-                    alert('Request error');
-                }
-            }
-        };
-
-        xmlhttp.send(JSON.stringify({'key': '56abc90f71f1a6f624a2b667fd7d1356-us13',
-           'message': {
-               'from_email': 'prishlaRabota@write.here',
-               'to': [{'email': 'thenoodly@gmail.com', 'type': 'to'}],
-               'autotext': 'true',
-               'subject': 'Yeah!',
-               'html': '<h1>Its work!</h1>'
-            }}));
+       e.preventDefault();
     }
+
 
     return {
         init: _init,
