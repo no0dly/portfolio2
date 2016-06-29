@@ -6,10 +6,10 @@ section#section1.section
             .bee-grid__wrap
                 
                 ul.bee-grid__list
-                    each img, index in ['bee-1.svg', 'bee-2.png', 'bee-3.png', 'bee-4.png', 'bee-5.png','bee-6.png', 'bee-7.png', 'bee-8.png', 'bee-9.png', 'bee-10.png', 'bee-11.png', 'bee-12.png', 'bee-13.png']
+                    each  link, img in {'bee-1.svg' : 'http://livenownutrition.linum.co/', 'bee-2-4.png': 'http://worldinbeta.com', 'bee-3-2.jpg': 'http://www.pwc-annualreport.co.uk', 'bee-4-1.png' : 'http://wmo.linum.co/presentations/', 'bee-5-2.png' : 'http://www.lixpi.com/', 'bee-6.png' : 'http://livenownutrition.linum.co/', 'bee-7.png' : 'http://livenownutrition.linum.co/', 'bee-8.png' : 'http://livenownutrition.linum.co/', 'bee-9.png' : 'http://livenownutrition.linum.co/', 'bee-10.png' : 'http://livenownutrition.linum.co/', 'bee-11.png' : 'http://livenownutrition.linum.co/', 'bee-12.png' : 'http://livenownutrition.linum.co/', 'bee-13.png' : 'http://livenownutrition.linum.co/'}
 
-                        li.bee-grid__item(data-anchor="slide1" )
-                            a.bee-grid__link.bee-grid__link--second( href='http://livenownutrition.linum.co/')
+                       li.bee-grid__item(data-anchor="slide1" )
+                            a.bee-grid__link.bee-grid__link--second( href= link)
                                 .bee-grid__box
                                     .bee-grid__image(style='background-image: url(/assets/img/#{img})')
 
